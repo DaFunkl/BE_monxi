@@ -24,6 +24,10 @@ public class TicTacToe_Manager {
 		return ret;
 	}
 
+	public static int getOpenGameAmt() {
+		return openGames.size();
+	}
+	
 	public static String requestGame() {
 		if (openGames.size() >= GeneralConfig.MAX_OPEN_GAMES) {
 			return null;
