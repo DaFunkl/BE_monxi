@@ -1,0 +1,1 @@
+java -jar target/BE_monxi-0.0.1.jar
