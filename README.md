@@ -8,9 +8,9 @@ all configuration goes to com.monx.BE_monxi.configuration
 
 Rest Controller should be placed in com.monx.BE_monxi.controller
 eg: com.monx.BE_monxi.controller.Default_Controller
-Controller Naming Convention: <ClassName>_Controller.java
+Controller Naming Convention: \<ClassName\>_Controller.java
 All controller shall route their endpoints starting with /api/ 
-This way every Rest calls has to go to <domain>/api/<rest-service>
+This way every Rest calls has to go to \<domain\>/api/\<rest-service\>
 
 Swagger is set up. It only shows all controller in the controller path.
 There is an admin controller path: com.monx.BE_monxi.admin
