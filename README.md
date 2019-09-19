@@ -29,3 +29,36 @@ like all POJOs for TicTacToe are located in com.monx.BE_monxi.models.ticatactoe
 Currently only 20 games of TicTacToe are allowed to be open at the same time. 
 Each Game ends after being at least 2 minutes idle (with current configuration, max Time should be around 2 min and ~10 sec).
 A Thread is used to look every 10 seconds if any game was idle for more than 2 minutes and closes it if so.  
+
+It's deployed on Heroku:
+https://monxi.herokuapp.com
+https://monxi.herokuapp.com/swagger-ui.html
+
+If you want to try it out:
+- Use the Swagger URL
+- Request a GameId by calling newGame Endpoint: /api/game/ttt/newGame
+- copy your GameId and use it in makeMove Endpoint (Example Body)
+```
+{
+  "gameId": "FfW_QCTxFUfzLhnlUbFH7MVgOhk",
+  "req": {
+    "x": 0,
+    "y": 0
+  }
+}
+```
+(you can only use 0-2 for x and y to access the board idx)
+Example Response:
+```
+{
+  "msg": null,
+  "valid": true,
+  "body": {
+    "board": [
+      "X--",
+      "---",
+      "-O-"
+    ],
+...
+```
+(If your turn was valid, the Computer chooses a random turn and executes it)
